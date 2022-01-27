@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DirectPaint3D/1.0.0": {
+        "dependencies": {
+          "MediaNativo": "1.0.8050.41059",
+          "Wew": "1.0.0.0"
+        },
+        "runtime": {
+          "DirectPaint3D.dll": {}
+        }
+      },
+      "MediaNativo/1.0.8050.41059": {
+        "runtime": {
+          "MediaNativo.dll": {
+            "assemblyVersion": "1.0.8050.41059",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Wew/1.0.0.0": {
+        "runtime": {
+          "Wew.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DirectPaint3D/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MediaNativo/1.0.8050.41059": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Wew/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
