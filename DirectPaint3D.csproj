@@ -1,0 +1,131 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationIcon>Cubo.ico</ApplicationIcon>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_copia\**" />
+    <Compile Remove="_graf2\**" />
+    <Compile Remove="_prueba\**" />
+    <EmbeddedResource Remove="_copia\**" />
+    <EmbeddedResource Remove="_graf2\**" />
+    <EmbeddedResource Remove="_prueba\**" />
+    <None Remove="_copia\**" />
+    <None Remove="_graf2\**" />
+    <None Remove="_prueba\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Graf\Abrir.png" />
+    <None Remove="Graf\Arc.png" />
+    <None Remove="Graf\Bezier.png" />
+    <None Remove="Graf\Copiar.png" />
+    <None Remove="Graf\Cortar.png" />
+    <None Remove="Graf\Cubo.png" />
+    <None Remove="Graf\Der.png" />
+    <None Remove="Graf\Deshacer.png" />
+    <None Remove="Graf\Elim.png" />
+    <None Remove="Graf\EnvCube.dds" />
+    <None Remove="Graf\Fondo.png" />
+    <None Remove="Graf\Frente.png" />
+    <None Remove="Graf\Grabar.png" />
+    <None Remove="Graf\Herrs.png" />
+    <None Remove="Graf\Inf.png" />
+    <None Remove="Graf\Izq.png" />
+    <None Remove="Graf\LimpiaFondo.png" />
+    <None Remove="Graf\Lin.png" />
+    <None Remove="Graf\LinLibre.png" />
+    <None Remove="Graf\ManoParte.cur" />
+    <None Remove="Graf\ManoParte.png" />
+    <None Remove="Graf\ManoPunto.cur" />
+    <None Remove="Graf\ManoPunto.png" />
+    <None Remove="Graf\MoldeAngular.mdl" />
+    <None Remove="Graf\MoldeCurvo.mdl" />
+    <None Remove="Graf\Nuevo.png" />
+    <None Remove="Graf\Parte.png" />
+    <None Remove="Graf\Pegar.png" />
+    <None Remove="Graf\Punto.mdl" />
+    <None Remove="Graf\Punto.mtl" />
+    <None Remove="Graf\Punto.obj" />
+    <None Remove="Graf\Punto.png" />
+    <None Remove="Graf\Puntos.png" />
+    <None Remove="Graf\QuadraticBezier.png" />
+    <None Remove="Graf\Rehacer.png" />
+    <None Remove="Graf\Sup.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Cubo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Graf\Abrir.png" />
+    <EmbeddedResource Include="Graf\Arc.png" />
+    <EmbeddedResource Include="Graf\Bezier.png" />
+    <EmbeddedResource Include="Graf\Copiar.png" />
+    <EmbeddedResource Include="Graf\Cortar.png" />
+    <EmbeddedResource Include="Graf\Cubo.png" />
+    <EmbeddedResource Include="Graf\Der.png" />
+    <EmbeddedResource Include="Graf\Deshacer.png" />
+    <EmbeddedResource Include="Graf\Elim.png" />
+    <EmbeddedResource Include="Graf\EnvCube.dds" />
+    <EmbeddedResource Include="Graf\Fondo.png" />
+    <EmbeddedResource Include="Graf\Frente.png" />
+    <EmbeddedResource Include="Graf\Grabar.png" />
+    <EmbeddedResource Include="Graf\Herrs.png" />
+    <EmbeddedResource Include="Graf\Inf.png" />
+    <EmbeddedResource Include="Graf\Izq.png" />
+    <EmbeddedResource Include="Graf\LimpiaFondo.png" />
+    <EmbeddedResource Include="Graf\Lin.png" />
+    <EmbeddedResource Include="Graf\LinLibre.png" />
+    <EmbeddedResource Include="Graf\ManoParte.cur" />
+    <EmbeddedResource Include="Graf\ManoParte.png" />
+    <EmbeddedResource Include="Graf\ManoPunto.cur" />
+    <EmbeddedResource Include="Graf\ManoPunto.png" />
+    <EmbeddedResource Include="Graf\MoldeAngular.mdl" />
+    <EmbeddedResource Include="Graf\MoldeCurvo.mdl" />
+    <EmbeddedResource Include="Graf\Nuevo.png" />
+    <EmbeddedResource Include="Graf\Parte.png" />
+    <EmbeddedResource Include="Graf\Pegar.png" />
+    <EmbeddedResource Include="Graf\Punto.mdl" />
+    <EmbeddedResource Include="Graf\Punto.mtl" />
+    <EmbeddedResource Include="Graf\Punto.obj" />
+    <EmbeddedResource Include="Graf\Punto.png" />
+    <EmbeddedResource Include="Graf\Puntos.png" />
+    <EmbeddedResource Include="Graf\QuadraticBezier.png" />
+    <EmbeddedResource Include="Graf\Rehacer.png" />
+    <EmbeddedResource Include="Graf\Sup.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MediaNativo">
+      <HintPath>..\Wew\bin\Debug\net6.0-windows\MediaNativo.dll</HintPath>
+    </Reference>
+    <Reference Include="Wew">
+      <HintPath>..\Wew\bin\Debug\net6.0-windows\Wew.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
