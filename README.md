@@ -6,3 +6,5 @@
 	<li>Model edition: transform, material and structure.</li>
 	<li>Vertex edition.</li>
 </ul>
+
+<img width="1366" height="708" alt="image" src="https://github.com/user-attachments/assets/0d3d0d4a-4a6c-414f-8f5a-d8282e132847" />
