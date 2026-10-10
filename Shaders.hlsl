@@ -5,17 +5,22 @@ struct PixelSimple
 	float4 Clr	    : COLOR;
 };
 
+cbuffer BufGlob : register(b3)
+{	float4 g_ClipPlane;
+};
+cbuffer BufInstan : register(b4)											// Datos de instancia
+{	matrix g_WorldInstan;													// World
+	float4 g_ClrInstan;														// Color
+};
+
 namespace VSStd
 {
-	cbuffer BufClip : register(b3)
-	{	float4 ClipPlane;
-	};
-
-	[clipplanes(ClipPlane)]
-	Pixel main(Vertex verVert)
+		[clipplanes(g_ClipPlane)]
+	Pixel main(VertexBone vboVert)
 	{	Pixel pix;
 	
-		pix = CalculatePixel(verVert.Position, verVert.Normal, verVert.Texcoord);
+		if (g_Animating)	CalculateBone(vboVert);
+		pix = CalculatePixel(vboVert.Vertex);
 		return pix;
 	}
 }
@@ -26,18 +31,22 @@ namespace VSPunto
 	{	float4 Pos			: POSITION;
 		float4 PosInst		: DESP;
 		bool Sel			: SEL;
-	};
-
-	cbuffer BufInstan : register(b2)										// Datos de instancia
-	{	matrix g_WorldInstant;												// World
-		float4 g_ClrInstan;													// Color
+		float3 WeightsInst	: WEIGHTS;
+		uint4 BonesInst		: BONES;
 	};
 
 	PixelSimple main(VertexPto vptVer)
-	{	PixelSimple res; float4 f4PosInst, f4;
+	{	PixelSimple res; float4 f4PosInst, f4; float3 norm; float4 tang = 0;
 
-		f4PosInst = mul(vptVer.PosInst, g_WorldInstant); f4PosInst.w = 0;	// Calc pos de inst; limpiar w
-		f4 = mul(vptVer.Pos, g_WorldMatrix);								// Calc pos de punto
+		if (g_Animating)													// Aplicar anim
+		{	VertexBone vxb;
+		
+			vxb.Vertex.Position = vptVer.PosInst; vxb.Vertex.Normal = 0; vxb.Vertex.Tangent = 0; vxb.Vertex.Texcoord = 0;
+				vxb.Weights = vptVer.WeightsInst; vxb.Bones = vptVer.BonesInst;
+			CalculateBone(vxb); vptVer.PosInst = vxb.Vertex.Position;
+		}
+		f4PosInst = mul(vptVer.PosInst, g_WorldInstan); f4PosInst.w = 0;	// Calc pos de inst; limpiar w
+		f4 = mul(vptVer.Pos, g_WorldMatrix);								// Calc pos de esquina
 		f4 = mul(f4PosInst + f4, g_ViewProjectionMatrix);					// Sumar ambas pos; aplicar vista
 		res.Pos = f4;
 		res.Clr = saturate((!vptVer.Sel ? g_ClrInstan : float4(0, 0, 0.7, 1)) + vptVer.Pos * 5);

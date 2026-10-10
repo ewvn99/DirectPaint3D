@@ -2,63 +2,73 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>disable</Nullable>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>disable</ImplicitUsings>
     <ApplicationIcon>Cubo.ico</ApplicationIcon>
     <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <RootNamespace />
+    <Copyright>WEW</Copyright>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="x64\**" />
     <Compile Remove="_copia\**" />
     <Compile Remove="_graf2\**" />
     <Compile Remove="_prueba\**" />
+    <EmbeddedResource Remove="x64\**" />
     <EmbeddedResource Remove="_copia\**" />
     <EmbeddedResource Remove="_graf2\**" />
     <EmbeddedResource Remove="_prueba\**" />
+    <None Remove="x64\**" />
     <None Remove="_copia\**" />
     <None Remove="_graf2\**" />
     <None Remove="_prueba\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Graf\Abrir.png" />
-    <None Remove="Graf\Arc.png" />
-    <None Remove="Graf\Bezier.png" />
-    <None Remove="Graf\Copiar.png" />
-    <None Remove="Graf\Cortar.png" />
-    <None Remove="Graf\Cubo.png" />
-    <None Remove="Graf\Der.png" />
-    <None Remove="Graf\Deshacer.png" />
-    <None Remove="Graf\Elim.png" />
-    <None Remove="Graf\EnvCube.dds" />
-    <None Remove="Graf\Fondo.png" />
-    <None Remove="Graf\Frente.png" />
-    <None Remove="Graf\Grabar.png" />
-    <None Remove="Graf\Herrs.png" />
-    <None Remove="Graf\Inf.png" />
-    <None Remove="Graf\Izq.png" />
-    <None Remove="Graf\LimpiaFondo.png" />
-    <None Remove="Graf\Lin.png" />
-    <None Remove="Graf\LinLibre.png" />
-    <None Remove="Graf\ManoParte.cur" />
-    <None Remove="Graf\ManoParte.png" />
-    <None Remove="Graf\ManoPunto.cur" />
-    <None Remove="Graf\ManoPunto.png" />
-    <None Remove="Graf\MoldeAngular.mdl" />
-    <None Remove="Graf\MoldeCurvo.mdl" />
-    <None Remove="Graf\Nuevo.png" />
-    <None Remove="Graf\Parte.png" />
-    <None Remove="Graf\Pegar.png" />
-    <None Remove="Graf\Punto.mdl" />
-    <None Remove="Graf\Punto.mtl" />
-    <None Remove="Graf\Punto.obj" />
-    <None Remove="Graf\Punto.png" />
-    <None Remove="Graf\Puntos.png" />
-    <None Remove="Graf\QuadraticBezier.png" />
-    <None Remove="Graf\Rehacer.png" />
-    <None Remove="Graf\Sup.png" />
+    <None Remove="Res\Abrir.png" />
+    <None Remove="Res\Arc.png" />
+    <None Remove="Res\Bezier.png" />
+    <None Remove="Res\Copiar.png" />
+    <None Remove="Res\Cortar.png" />
+    <None Remove="Res\Cubo.png" />
+    <None Remove="Res\Der.png" />
+    <None Remove="Res\Deshacer.png" />
+    <None Remove="Res\Elim.png" />
+    <None Remove="Res\EnvCube.dds" />
+    <None Remove="Res\Fondo.png" />
+    <None Remove="Res\Frente.png" />
+    <None Remove="Res\Grabar.png" />
+    <None Remove="Res\Herrs.png" />
+    <None Remove="Res\Inf.png" />
+    <None Remove="Res\Izq.png" />
+    <None Remove="Res\LimpiaFondo.png" />
+    <None Remove="Res\Lin.png" />
+    <None Remove="Res\LinLibre.png" />
+    <None Remove="Res\ManoParte.cur" />
+    <None Remove="Res\ManoParte.png" />
+    <None Remove="Res\ManoPunto.cur" />
+    <None Remove="Res\ManoPunto.png" />
+    <None Remove="Res\MoldeAngular.mdl" />
+    <None Remove="Res\MoldeCurvo.mdl" />
+    <None Remove="Res\Nuevo.png" />
+    <None Remove="Res\Parte.png" />
+    <None Remove="Res\Pegar.png" />
+    <None Remove="Res\Play.png" />
+    <None Remove="Res\Punto.mdl" />
+    <None Remove="Res\Punto.mtl" />
+    <None Remove="Res\Punto.obj" />
+    <None Remove="Res\Punto.png" />
+    <None Remove="Res\Puntos.png" />
+    <None Remove="Res\QuadraticBezier.png" />
+    <None Remove="Res\Rehacer.png" />
+    <None Remove="Res\Sup.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,51 +76,37 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Graf\Abrir.png" />
-    <EmbeddedResource Include="Graf\Arc.png" />
-    <EmbeddedResource Include="Graf\Bezier.png" />
-    <EmbeddedResource Include="Graf\Copiar.png" />
-    <EmbeddedResource Include="Graf\Cortar.png" />
-    <EmbeddedResource Include="Graf\Cubo.png" />
-    <EmbeddedResource Include="Graf\Der.png" />
-    <EmbeddedResource Include="Graf\Deshacer.png" />
-    <EmbeddedResource Include="Graf\Elim.png" />
-    <EmbeddedResource Include="Graf\EnvCube.dds" />
-    <EmbeddedResource Include="Graf\Fondo.png" />
-    <EmbeddedResource Include="Graf\Frente.png" />
-    <EmbeddedResource Include="Graf\Grabar.png" />
-    <EmbeddedResource Include="Graf\Herrs.png" />
-    <EmbeddedResource Include="Graf\Inf.png" />
-    <EmbeddedResource Include="Graf\Izq.png" />
-    <EmbeddedResource Include="Graf\LimpiaFondo.png" />
-    <EmbeddedResource Include="Graf\Lin.png" />
-    <EmbeddedResource Include="Graf\LinLibre.png" />
-    <EmbeddedResource Include="Graf\ManoParte.cur" />
-    <EmbeddedResource Include="Graf\ManoParte.png" />
-    <EmbeddedResource Include="Graf\ManoPunto.cur" />
-    <EmbeddedResource Include="Graf\ManoPunto.png" />
-    <EmbeddedResource Include="Graf\MoldeAngular.mdl" />
-    <EmbeddedResource Include="Graf\MoldeCurvo.mdl" />
-    <EmbeddedResource Include="Graf\Nuevo.png" />
-    <EmbeddedResource Include="Graf\Parte.png" />
-    <EmbeddedResource Include="Graf\Pegar.png" />
-    <EmbeddedResource Include="Graf\Punto.mdl" />
-    <EmbeddedResource Include="Graf\Punto.mtl" />
-    <EmbeddedResource Include="Graf\Punto.obj" />
-    <EmbeddedResource Include="Graf\Punto.png" />
-    <EmbeddedResource Include="Graf\Puntos.png" />
-    <EmbeddedResource Include="Graf\QuadraticBezier.png" />
-    <EmbeddedResource Include="Graf\Rehacer.png" />
-    <EmbeddedResource Include="Graf\Sup.png" />
+    <EmbeddedResource Include="Res\Arc.png" />
+    <EmbeddedResource Include="Res\Bezier.png" />
+    <EmbeddedResource Include="Res\Cubo.png" />
+    <EmbeddedResource Include="Res\Der.png" />
+    <EmbeddedResource Include="Res\EnvCube.dds" />
+    <EmbeddedResource Include="Res\Fondo.png" />
+    <EmbeddedResource Include="Res\Frente.png" />
+    <EmbeddedResource Include="Res\Herrs.png" />
+    <EmbeddedResource Include="Res\Inf.png" />
+    <EmbeddedResource Include="Res\Izq.png" />
+    <EmbeddedResource Include="Res\LimpiaFondo.png" />
+    <EmbeddedResource Include="Res\Lin.png" />
+    <EmbeddedResource Include="Res\LinLibre.png" />
+    <EmbeddedResource Include="Res\ManoParte.cur" />
+    <EmbeddedResource Include="Res\ManoParte.png" />
+    <EmbeddedResource Include="Res\ManoPunto.cur" />
+    <EmbeddedResource Include="Res\ManoPunto.png" />
+    <EmbeddedResource Include="Res\MoldeAngular.mdl" />
+    <EmbeddedResource Include="Res\MoldeCurvo.mdl" />
+    <EmbeddedResource Include="Res\Parte.png" />
+    <EmbeddedResource Include="Res\Play.png" />
+    <EmbeddedResource Include="Res\Punto.mdl" />
+    <EmbeddedResource Include="Res\Punto.mtl" />
+    <EmbeddedResource Include="Res\Punto.png" />
+    <EmbeddedResource Include="Res\Puntos.png" />
+    <EmbeddedResource Include="Res\QuadraticBezier.png" />
+    <EmbeddedResource Include="Res\Sup.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MediaNativo">
-      <HintPath>..\Wew\bin\Debug\net6.0-windows\MediaNativo.dll</HintPath>
-    </Reference>
-    <Reference Include="Wew">
-      <HintPath>..\Wew\bin\Debug\net6.0-windows\Wew.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Wew\Wew.csproj" />
   </ItemGroup>
 
   <ItemGroup>

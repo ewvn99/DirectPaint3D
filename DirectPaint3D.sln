@@ -3,18 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectPaint3D", "DirectPaint3D.csproj", "{12744FF0-8FCB-4647-97C8-3D7F34D011FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wew", "..\Wew\Wew.csproj", "{B5EC56DA-AF4F-4001-9B83-53DDBF03BB42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectPaint3D", "DirectPaint3D.csproj", "{1DD367D7-5CB5-4102-AACC-B7083CD78146}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{12744FF0-8FCB-4647-97C8-3D7F34D011FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12744FF0-8FCB-4647-97C8-3D7F34D011FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12744FF0-8FCB-4647-97C8-3D7F34D011FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12744FF0-8FCB-4647-97C8-3D7F34D011FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EC56DA-AF4F-4001-9B83-53DDBF03BB42}.Debug|x64.ActiveCfg = Debug|x64
+		{B5EC56DA-AF4F-4001-9B83-53DDBF03BB42}.Debug|x64.Build.0 = Debug|x64
+		{B5EC56DA-AF4F-4001-9B83-53DDBF03BB42}.Release|x64.ActiveCfg = Release|x64
+		{B5EC56DA-AF4F-4001-9B83-53DDBF03BB42}.Release|x64.Build.0 = Release|x64
+		{1DD367D7-5CB5-4102-AACC-B7083CD78146}.Debug|x64.ActiveCfg = Debug|x64
+		{1DD367D7-5CB5-4102-AACC-B7083CD78146}.Debug|x64.Build.0 = Debug|x64
+		{1DD367D7-5CB5-4102-AACC-B7083CD78146}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
